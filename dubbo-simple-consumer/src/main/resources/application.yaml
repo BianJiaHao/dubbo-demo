@@ -1,0 +1,17 @@
+server:
+  port: 8091
+  servlet:
+    context-path: /dubbo
+dubbo:
+  application:
+    id: dubbo-consumer-demo
+    name: dubbo-consumer-demo
+  registry:
+    address: nacos://192.168.88.193:8848
+    timeout: 2000
+  protocol:
+    name: dubbo
+    port: -1
+spring:
+  main:
+    allow-bean-definition-overriding: true

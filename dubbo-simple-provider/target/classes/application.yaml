@@ -1,0 +1,19 @@
+server:
+  port: 8090
+
+dubbo:
+  application:
+    id: dubbo-provider-demo
+    name: dubbo-provider-demo
+  registry:
+    address: nacos://192.168.88.193:8848
+    timeout: 2000
+  protocol:
+    name: dubbo
+    port: -1
+  # 扫描 @DubboService 注解
+  scan:
+    base-packages: com.bianjiahao.provider.serviceImpl
+spring:
+  main:
+    allow-bean-definition-overriding: true
